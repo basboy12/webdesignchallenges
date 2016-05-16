@@ -47,7 +47,7 @@ gulp.task('scripts', function() {
   // .transform(babelify)
   .bundle()
   .on('error', handleError)
-  .pipe(source('admin.min.js'))
+  .pipe(source('app.min.js'))
   .pipe(gulp.dest('public/js'))
   .pipe(sync.reload({stream: true}));
 });

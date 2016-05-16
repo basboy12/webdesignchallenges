@@ -1,2 +1,192 @@
 @import 'vendor/zurb/foundation/scss/foundation.scss';
 @include foundation-everything;
+
+@import 'node_modules/font-awesome/scss/font-awesome.scss';
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);
+
+$blue-light: #5589A9;
+$blue-dark: #293C45;
+$orange: #EB6E57;
+
+$gray-light: #F3F3F3;
+$gray-mid: #6A6A6A;
+$gray-dark: #656565;
+
+$black: #323232;
+
+.container {
+  font-family: 'Roboto';
+  color: $black;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background: $gray-light;
+  color: $gray-mid;
+  height: 60px;
+  @include clearfix()
+  &:before {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 60px;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: $gray-light;
+    z-index: -1;
+  }
+  .logo {
+    float: left;
+    font-size: 36px;
+    padding: 0 15px;
+  }
+  .page-links {
+    float: left;
+    list-style: none;
+    margin: 0;
+    font-weight: 500;
+    .link {
+      display: inline-block;
+      margin: 15px 15px;
+      &:hover {
+        cursor: pointer;
+        border-bottom: 2px solid $gray-mid;
+      }
+    }
+  }
+  .user-actions {
+    list-style: none;
+    margin: 10px 0;
+    float: right;
+    .action {
+      display: block;
+      float: left;
+      margin: 5px 15px;
+    }
+    .user {
+      display: block;
+      float: left;
+      .photo {
+        margin: 0 5px 0 15px;
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+          height: 35px;
+          width: auto;
+        }
+      }
+      .photo, .toggle {
+        display: block;
+        float: left;
+      }
+      .toggle {
+        margin: 5px 15px 0 0;
+      }
+    }
+  }
+  .user-menu {
+    position: absolute;
+    display: none;
+  }
+}
+
+.main-content {
+  margin-top: 30px;
+  .panel-content {
+    padding: 30px;
+  }
+  .side-panel {
+    float: right;
+    width: 30%;
+    .my-challenges, .most-popular {
+      margin-top: 30px;
+      .title {
+        font-size: 18px;
+        font-weight: 600;
+        background: $gray-light;
+        border: 1px solid $gray-dark;
+        padding: 15px 30px;
+      }
+      .challenges {
+        list-style: none;
+        margin: 0 30px;
+        color: $gray-dark;
+        .challenge {
+          margin: 10px 0;
+          @include clearfix()
+          .name {
+            float: left;
+          }
+          .users {
+            float: right;
+            i {
+              padding: 0 5px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .main-panel {
+    float: left;
+    width: 70%;
+    .challenge {
+      float: left;
+      clear: left;
+      margin: 20px 0;
+      height: 200px;
+      &:nth-of-type(3n-2) {
+        .remaining {
+          background: $blue-light;
+        }
+      }
+      &:nth-of-type(3n-1) {
+        .remaining {
+          background: $orange;
+        }
+      }
+      &:nth-of-type(3n) {
+        .remaining {
+          background: $blue-dark;
+        }
+      }
+      .remaining {
+        color: $gray-light;
+        float: left;
+        width: 200px;
+        height: 100%;
+        padding: 15px;
+      }
+      .about {
+        float: left;
+        width: 500px;
+        height: 100%;
+        padding: 15px;
+        border: 1px solid $gray-dark;
+        border-left: none;
+        background: $gray-light;
+        .name {
+          font-size: 28px;
+          font-weight: 600;
+          line-height: 24px;
+          margin: 0;
+        }
+        .creator {
+          margin: 0;
+          color: $gray-dark;
+        }
+        .short-description {
+          margin: 15px 0;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+
+}

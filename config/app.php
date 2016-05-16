@@ -155,11 +155,6 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
-        /*
-         * Package Service Providers...
-         */
-        Barryvdh\Debugbar\ServiceProvider::class,
     ],
 
     /*
