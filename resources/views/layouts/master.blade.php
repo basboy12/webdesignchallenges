@@ -28,17 +28,17 @@
       </div>
 
       <ul class="page-links">
-        <li class="link">Challenges</li>
-        <li class="link">Resources</li>
-        <li class="link">Leaderboards</li>
+        <li><a href="#">Challenges</a></li>
+        <li><a href="#">Documentation</a></li>
       </ul>
 
       <ul class="user-actions">
-        <li class="action"><i class="fa fa-plus" aria-hidden="true"></i></li>
+        <li class="action"><i class="fa fa-search" aria-hidden="true"></i></li>
+        <li class="action"><i class="fa fa-plus-square" aria-hidden="true"></i></li>
         <li class="action"><i class="fa fa-bolt" aria-hidden="true"></i></li>
         <li class="user">
           <div class="photo"><img src="/images/users/default.png"></div>
-          <div class="toggle"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+          <div class="toggle"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
           <div class="user-menu">
             <ul class="menu-items">
               <li class="item"><i class="fa fa-user" aria-hidden="true"></i> profile</li>
