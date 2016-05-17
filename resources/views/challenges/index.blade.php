@@ -54,7 +54,7 @@
         </div>
         <div class="about">
           <h2>Portfolio Design</h2>
-          <p class="creator">by kyle</p>
+          <p class="creator">by <span>kyle</span></p>
           <p class="short-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi repellendus, voluptatem ab amet sunt officia nemo aliquid blanditiis eveniet quos earum voluptatibus. Nesciunt, porro, fugit!</p>
         </div>
       </div>
@@ -66,7 +66,7 @@
         </div>
         <div class="about">
           <h2>Pinterest Clone</h2>
-          <p class="creator">by danigil</p>
+          <p class="creator">by <span>danigil</span></p>
           <p class="short-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi repellendus, voluptatem ab amet sunt officia nemo aliquid blanditiis eveniet quos earum voluptatibus. Nesciunt, porro, fugit!</p>
         </div>
       </div>
