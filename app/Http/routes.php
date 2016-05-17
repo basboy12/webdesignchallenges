@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('challenges.index');
-});
+// Route::get('/', function () {
+//     return view('challenges.index');
+// });
+
+Route::resource('/users', 'UserController');
+Route::resource('/challenges', 'ChallengeController');

@@ -11,13 +11,13 @@
   <script src="/js/app.min.js"></script>
 
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-42718641-5', 'auto');
-    ga('send', 'pageview');
+  ga('create', 'UA-42718641-5', 'auto');
+  ga('send', 'pageview');
   </script>
 </head>
 <body>
@@ -28,26 +28,32 @@
       </div>
 
       <ul class="page-links">
-        <li><a href="#">Challenges</a></li>
+        <li><a href="/challenges">Challenges</a></li>
         <li><a href="#">Documentation</a></li>
       </ul>
-
-      <ul class="user-actions">
-        <li class="action"><i class="fa fa-search" aria-hidden="true"></i></li>
-        <li class="action"><i class="fa fa-plus-square" aria-hidden="true"></i></li>
-        <li class="action"><i class="fa fa-bolt" aria-hidden="true"></i></li>
-        <li class="user">
-          <div class="photo"><img src="/images/users/default.png"></div>
-          <div class="toggle"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
-          <div class="user-menu">
-            <ul class="menu-items">
-              <li class="item"><i class="fa fa-user" aria-hidden="true"></i> profile</li>
-              <li class="item"><i class="fa fa-cog" aria-hidden="true"></i> settings</li>
-              <li class="item"><i class="fa fa-sign-out" aria-hidden="true"></i> logout</li>
-            </ul>
-          </div>
-        </li>
-      </ul>
+      @if(Auth::guest())
+        <ul class="user-actions">
+          <li class="action"><i class="fa fa-search" aria-hidden="true"></i></li>
+          <li class="action"><a href="/challenges/create"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+          <li class="action"><i class="fa fa-bolt" aria-hidden="true"></i></li>
+          <li class="user">
+            <div class="photo"><img src="/images/users/default.png"></div>
+            <div class="toggle"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+            <div class="user-menu">
+              <ul class="menu-items">
+                <li class="item"><i class="fa fa-user" aria-hidden="true"></i> profile</li>
+                <li class="item"><i class="fa fa-cog" aria-hidden="true"></i> settings</li>
+                <li class="item"><i class="fa fa-sign-out" aria-hidden="true"></i> logout</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      @else
+        <ul class="user-actions">
+          <li class="action"><a href="/login">login</a></li>
+          <li class="action"><a href="/register">register</a></li>
+        </ul>
+      @endif
     </header>
 
     @yield('content')
